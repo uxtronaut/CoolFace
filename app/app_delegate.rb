@@ -2,7 +2,7 @@ class AppDelegate
   def applicationDidFinishLaunching(notification)
     @statusBar = NSStatusBar.systemStatusBar
 
-    @faces = YAML.load(File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read)['faces']
+    @faces = YAML.load(File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read)['faces'].uniq!
 
     @item = @statusBar.statusItemWithLength(-1)
     @item.retain
@@ -18,7 +18,7 @@ class AppDelegate
 
   def setupMenu
     menu = NSMenu.new
-    menu.initWithTitle 'Menubar App'
+    menu.initWithTitle 'CoolFace'
 
     mi = NSMenuItem.new
     mi.title = 'Quit'
