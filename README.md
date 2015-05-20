@@ -1,5 +1,7 @@
 # CoolFace.app
 
+![Cool Face icon](/resources/cool-face.png?raw=true)
+
 Adds the CoolFace status bar icon and hotkeys to OS X.
 
 
