@@ -1,19 +1,22 @@
 class AppDelegate
   def applicationDidFinishLaunching(notification)
-    @statusBar = NSStatusBar.systemStatusBar
+    @currentFaceIndex = 0
+    @faces = loadFaces
+    @statusBarItem = setupStatusBarItem
+    setupHotKeys
+  end
 
-    @faces = YAML.load(File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read)['faces'].uniq!
+  def loadFaces
+    YAML.load(File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read)['faces'].uniq!.shuffle
+  end
 
-    @item = @statusBar.statusItemWithLength(-1)
-    @item.retain
-    @item.setTitle("(◕‿◕)")
-    @item.setHighlightMode(true)
-    @item.setMenu(setupMenu)
-
-    center = DDHotKeyCenter.sharedHotKeyCenter
-
-    center.registerHotKeyWithKeyCode(KVK_ANSI_C, modifierFlags:(NSCommandKeyMask|NSControlKeyMask|NSShiftKeyMask), target:self, action:'copyCoolFace:', object:nil)
-
+  def setupStatusBarItem
+    item = NSStatusBar.systemStatusBar.statusItemWithLength(-1)
+    item.retain
+    item.setTitle("(◕‿◕)")
+    item.setHighlightMode(true)
+    item.setMenu(setupMenu)
+    item
   end
 
   def setupMenu
@@ -28,12 +31,26 @@ class AppDelegate
     menu
   end
 
-  def copyCoolFace(event)
+  def setupHotKeys
+    center = DDHotKeyCenter.sharedHotKeyCenter
+    center.registerHotKeyWithKeyCode(KVK_ANSI_C, modifierFlags:(NSCommandKeyMask|NSControlKeyMask|NSShiftKeyMask), target:self, action:'copyNextFace:', object:nil)
+    center.registerHotKeyWithKeyCode(KVK_ANSI_X, modifierFlags:(NSCommandKeyMask|NSControlKeyMask|NSShiftKeyMask), target:self, action:'copyPrevFace:', object:nil)
+  end
 
-    face = @faces.shuffle.first
+  def copyNextFace(event)
+    @currentFaceIndex += 1
+    copyFace
+  end
 
+  def copyPrevFace(event)
+    @currentFaceIndex -= 1
+    copyFace
+  end
+
+  def copyFace
+    face = @faces[@currentFaceIndex].strip
     %x[printf "#{face}" | __CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbcopy]
-    @item.setTitle(face)
+    @statusBarItem.setTitle(face)
   end
 
 end
