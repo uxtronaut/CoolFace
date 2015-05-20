@@ -60,7 +60,7 @@ a.k.a. CoolFacin' All Day Online With My Squad (CADOWMS)
 
 * **DON'T** forget that you can move forward and backward through the Cool Faces! Have you been practicing the hotkeys? Can you do them with one hand? You got it!
 
-* **DON'T** use Cool Faces to bully people (especially the author of the app)! Some of the Cool Faces look pretty upset/angry - don't worry, they won't hurt you! I know this, so **DON'T** try and scare me with some angry Cool Face with his fists up!
+* **DON'T** use Cool Faces to bully people (especially the author of the app)! Some of the Cool Faces look pretty upset/angry, please only use them for joking around!
 
 
 ## Support
