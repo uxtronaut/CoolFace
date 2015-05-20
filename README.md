@@ -54,7 +54,7 @@ a.k.a. CoolFacin' All Day Online With My Squad (CADOWMS)
 * **DO** practice the hotkeys! I bet with enough practice you can do them with just one hand!
 
 
-## Dont's
+## Don'ts
 
 * If you see someone using `CoolFace.app` from their `Downloads` folder, **DON'T** shame them - just help them move the app and teach them about the advantages of a well-organized computer!
 
