@@ -9,9 +9,9 @@ Adds the CoolFace status bar icon and hotkeys to OS X.
 
 2. Unzip `CoolFace.app.zip`
 
-3. Copy the freshly `CoolFace.app` to your `Applications` folder
+3. Copy the freshly unzipped `CoolFace.app` to your `Applications` folder
 
-4. Make sure you allow CoolFace.app (or all apps written by uncertified developers) to run in System Preferences => Search for "GateKeeper" => Allow apps downloaded from => Anywhere.
+4. Make sure you allow `CoolFace.app` (or all apps written by uncertified developers) to run in System Preferences => Search for "gatekeeper" => Allow apps downloaded from => Anywhere.
 
 
 ## Usage
@@ -40,14 +40,14 @@ a.k.a. CoolFacin' All Day Online With My Squad (CADOWMS)
 
 1. Exit `CoolFace.app`
 
-2. Copy the new `CoolFace.app` into your Applications folder - Say "Yes" to overwrite the old one!
+2. Copy the new `CoolFace.app` into your `Applications` folder - Say "Yes" to overwrite the old one!
 
 
 ## Dos
 
 * If you see someone using `CoolFace.app` from the `Applications` folder on their computer, **DO** point it out and exclaim "Cool Face!"
 
-* **DO** set `CoolFace.app` to start when you sign in. You can do this in System Preferences => Search for "Login Items" => + Button => Find `CoolFace.app` in the list and click Add.
+* **DO** set `CoolFace.app` to start when you sign in. You can do this in System Preferences => Search for "Login Items" => + Button => Find `CoolFace.app` in the list and click "Add".
 
 * **DO** check the `CoolFace.app` GitHub repo for updates on a regular basis to get the latest Cool Faces!
 
