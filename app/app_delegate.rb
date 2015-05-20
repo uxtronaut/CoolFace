@@ -7,7 +7,9 @@ class AppDelegate
   end
 
   def loadFaces
-    YAML.load(File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read)['faces'].uniq!.shuffle
+    faces_file = File.open(File.join(NSBundle.mainBundle.resourcePath, 'faces.yml')).read
+    faces = YAML.load(faces_file)['faces']
+    faces.uniq!.shuffle!
   end
 
   def setupStatusBarItem
