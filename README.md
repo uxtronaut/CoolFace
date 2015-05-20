@@ -20,9 +20,9 @@ a.k.a. CoolFacin' All Day Online With My Squad (CADOWMS)
 
 1. Run `CoolFace.app` from your `Applications` folder.
 
-2. `Ctrl + Cmd + Shift + C` copies the next cool face to your keybaord.
+2. `Ctrl + Cmd + Shift + C` copies the next cool face to your clipboard.
 
-3. `Ctrl + Cmd + Shift + X` copies the previous cool face to your keybaord.
+3. `Ctrl + Cmd + Shift + X` copies the previous cool face to your clipboard.
 
 4. The most recently copied cool face will be reflected in the OS X status bar.
 
