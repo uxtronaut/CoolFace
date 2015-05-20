@@ -14,10 +14,13 @@ class AppDelegate
 
   def setupStatusBarItem
     item = NSStatusBar.systemStatusBar.statusItemWithLength(-1)
+
     item.retain
     item.setTitle("(◕‿◕)")
+
     item.setHighlightMode(true)
     item.setMenu(setupMenu)
+
     item
   end
 
@@ -41,11 +44,21 @@ class AppDelegate
 
   def copyNextFace(event)
     @currentFaceIndex += 1
+
+    if @currentFaceIndex > @faces.size - 1
+      @currentFaceIndex = 0
+    end
+
     copyFace
   end
 
   def copyPrevFace(event)
     @currentFaceIndex -= 1
+
+    if @currentFaceIndex < 0
+      @currentFaceIndex = @faces.size - 1
+    end
+
     copyFace
   end
 
