@@ -142,8 +142,9 @@ class AppDelegate
     url = NSURL.URLWithString('http://twitter.com/benfrederick')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('@benfrederick', withURL:url))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool hair animated graphic by Kole Kostelic', attributes:style))
-
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool hair animated graphic by ', attributes:style))
+    url = NSURL.URLWithString('http://twitter.com/koleJK')
+    credits.appendAttributedString(NSAttributedString.hyperlinkFromString('@koleJK', withURL:url))
 
     credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by ', attributes:style))
     url = NSURL.URLWithString('http://andymikulski.com/')
