@@ -19,5 +19,5 @@ Motion::Project::App.setup do |app|
   app.vendor_project 'vendor/DDHotKey', :static, :cflags => '-fobjc-arc'
   app.vendor_project 'vendor/NSAttributedString+Hyperlink', :static, :cflags => '-fobjc-arc'
   app.info_plist['LSUIElement'] = true
-  app.version = '0.0.5'
+  app.version = '0.0.6'
 end
