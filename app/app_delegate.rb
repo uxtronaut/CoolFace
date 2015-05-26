@@ -131,19 +131,22 @@ class AppDelegate
 
     credits = NSMutableAttributedString.alloc.init
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('Written by '))
+    font = NSFont.systemFontOfSize(12)
+    style = NSDictionary.dictionaryWithObject(font, forKey:NSFontAttributeName)
+
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('Written by ', attributes:style))
     url = NSURL.URLWithString('http://twitter.com/uxtronaut')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('@uxtronaut', withURL:url))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Icon by '))
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Icon by ', attributes:style))
     url = NSURL.URLWithString('http://twitter.com/benfrederick')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('@benfrederick', withURL:url))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool hair animated graphic by Kole Kostelic'))
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool hair animated graphic by Kole Kostelic', attributes:style))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by Andy Mikulski'))
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by Andy Mikulski', attributes:style))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Additional testing, ideas, and inspiration from the fine folks of '))
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Additional testing, ideas, and inspiration from the fine folks of ', attributes:style))
     url = NSURL.URLWithString('http://mondorobot.com')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('Mondo Robot', withURL:url))
 
