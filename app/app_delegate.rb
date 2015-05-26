@@ -144,7 +144,10 @@ class AppDelegate
 
     credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool hair animated graphic by Kole Kostelic', attributes:style))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by Andy Mikulski', attributes:style))
+
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by ', attributes:style))
+    url = NSURL.URLWithString('http://andymikulski.com/')
+    credits.appendAttributedString(NSAttributedString.hyperlinkFromString('Andy Mikulski', withURL:url))
 
     credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Additional testing, ideas, and inspiration from the fine folks of ', attributes:style))
     url = NSURL.URLWithString('http://mondorobot.com')
