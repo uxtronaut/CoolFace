@@ -89,7 +89,7 @@ class AppDelegate
   end
 
   def setupAboutWindow
-    width = 280
+    width = 310
     height = 420
     left = NSScreen.mainScreen.frame.size.width/2 - width/2
     top = NSScreen.mainScreen.frame.size.height/2 - height/2
@@ -118,11 +118,11 @@ class AppDelegate
   end
 
   def setupInstructionsTextB
-    setupTextField("Previous Cool Face: Cmd + Ctrl + Shift + X", :top => 180)
+    setupTextField("Previous Cool Face: Cmd + Ctrl + Shift + X", :top => 190)
   end
 
   def setupCreditsText
-    text = NSTextField.alloc.initWithFrame([[15, @aboutWindow.frame.size.height - 280], [@aboutWindow.frame.size.width - 30, 100]])
+    text = NSTextField.alloc.initWithFrame([[15, @aboutWindow.frame.size.height - 285], [@aboutWindow.frame.size.width - 30, 100]])
     text.backgroundColor = @aboutWindow.backgroundColor
     text.allowsEditingTextAttributes = true
     text.selectable = true
@@ -146,7 +146,7 @@ class AppDelegate
     url = NSURL.URLWithString('http://twitter.com/KoleJK')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('@KoleJK', withURL:url))
 
-    credits.appendAttributedString(NSAttributedString.alloc.initWithString('. Cool face curation assisted by ', attributes:style))
+    credits.appendAttributedString(NSAttributedString.alloc.initWithString(".\nCool face curation assisted by ", attributes:style))
     url = NSURL.URLWithString('http://andymikulski.com/')
     credits.appendAttributedString(NSAttributedString.hyperlinkFromString('Andy Mikulski', withURL:url))
 
