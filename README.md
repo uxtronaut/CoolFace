@@ -33,7 +33,7 @@ a.k.a. CoolFacin' All Day Online With My Squad (CADOWMS)
 
 ## Uninstall
 
-1. Exit `CooFace.app`
+1. Exit `CoolFace.app`
 
 2. Delete `CoolFace.app` from your `Applications` folder
 
